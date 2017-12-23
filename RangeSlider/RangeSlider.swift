@@ -334,4 +334,11 @@ public class RangeSlider: UIControl {
 		upperThumbLayer.highlighted = false
 	}
 	
+    override public func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        var bounds: CGRect = self.bounds
+        bounds = bounds.insetBy(dx: -10, dy: -15)
+        return bounds.contains(point)
+    }
+
+    
 }
